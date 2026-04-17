@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱养生 iYang - 中医养生助手</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+        
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 24px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 10px;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .features {
+            background: white;
+            padding: 80px 20px;
+            margin: 40px 0;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #667eea;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .feature-item h3 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .feature-item p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            opacity: 0.8;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .features h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="app-icon">🌿</div>
+            <h1>爱养生 iYang</h1>
+            <p class="subtitle">中医养生助手 · 日常健康参考</p>
+            <a href="https://apps.apple.com/app/iyang-wellness" class="download-btn">📱 Download on the App Store</a>
+        </header>
+        
+        <section class="features">
+            <h2>核心功能</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🌅</div>
+                    <h3>十二时辰养生</h3>
+                    <p>根据传统子午流注理论，智能提醒当前时辰对应的经络养生建议，帮助您顺应自然规律。</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">📸</div>
+                    <h3>智能观察分析</h3>
+                    <p>通过拍摄舌象、面部照片，结合AI分析技术，为您提供直观的健康状态参考。</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">💆</div>
+                    <h3>经络穴位保健</h3>
+                    <p>详细的经络图谱和穴位介绍，配合AR技术定位，让自我保健按摩变得简单易学。</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🌿</div>
+                    <h3>节气养生指导</h3>
+                    <p>根据二十四节气变化，提供当季饮食、运动、起居养生建议，顺应天时调养身心。</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">❤️</div>
+                    <h3>健康数据同步</h3>
+                    <p>与Apple HealthKit无缝集成，同步您的步数、心率、睡眠等数据，全面掌握健康状况。</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">✨</div>
+                    <h3>水墨风格界面</h3>
+                    <p>典雅的东方美学设计，让传统养生文化在现代科技中焕发新的生命力。</p>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>
+                <a href="/support">技术支持</a> |
+                <a href="/privacy">隐私政策</a> |
+                <a href="mailto:support@iyang.app">联系我们</a>
+            </p>
+            <p style="margin-top: 20px;">&copy; 2024 iYang Wellness. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
