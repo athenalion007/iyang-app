@@ -3,204 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iYang 爱养生 - 隐私政策</title>
+    <title>隐私政策 - 爱养生 iYang</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #1A1A2E;
+            background: #FAFAF8;
+            min-height: 100vh;
+        }
+        
+        /* Hero Section - 五行渐变 */
+        .hero-section {
+            background: linear-gradient(135deg, #1A1A2E 0%, #394359 50%, #2D8C5C 100%);
+            padding: 60px 20px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
         }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c5530;
-            text-align: center;
+        
+        /* 返回按钮 */
+        .back-link {
+            display: inline-block;
             margin-bottom: 30px;
-        }
-        h2 {
-            color: #2c5530;
-            border-bottom: 2px solid #2c5530;
-            padding-bottom: 10px;
-            margin-top: 30px;
-        }
-        .nav-links {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .nav-links a {
-            color: #2c5530;
+            color: #FAFAF8;
             text-decoration: none;
-            margin: 0 10px;
-        }
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-        .lang-toggle {
-            text-align: right;
-            margin-bottom: 20px;
-        }
-        .lang-toggle button {
-            background: #2c5530;
-            color: white;
-            border: none;
-            padding: 8px 16px;
+            padding: 10px 20px;
+            border: 2px solid rgba(250, 250, 248, 0.6);
             border-radius: 6px;
-            cursor: pointer;
-            margin-left: 10px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            background: rgba(26, 26, 46, 0.3);
         }
-        .lang-toggle button:hover {
-            background: #3d7044;
+        
+        .back-link:hover {
+            background: #C53D43;
+            border-color: #C53D43;
+            box-shadow: 0 4px 12px rgba(197, 61, 67, 0.3);
         }
-        .en {
-            display: none;
+        
+        header {
+            text-align: center;
+            color: white;
         }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        /* Content Section - 宣纸质感 */
+        .content {
+            background: white;
+            padding: 50px 40px;
+            margin: -40px 20px 40px;
+            border-radius: 16px;
+            box-shadow: 
+                0 4px 20px rgba(0, 0, 0, 0.06),
+                0 0 0 1px rgba(224, 220, 213, 0.6);
+            position: relative;
+            z-index: 2;
+            border: 1px solid #E0DCD5;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section:last-child {
+            margin-bottom: 0;
+        }
+        
+        h2 {
+            font-size: 1.4em;
+            color: #1A1A2E;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #C53D43;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #5C5C6E;
+            line-height: 1.9;
+            font-size: 15px;
+        }
+        
         ul {
-            padding-left: 20px;
+            margin-left: 20px;
+            margin-bottom: 15px;
         }
+        
         li {
             margin-bottom: 10px;
+            color: #5C5C6E;
+            line-height: 1.8;
         }
-        .footer {
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(45, 140, 92, 0.1) 0%, rgba(197, 61, 67, 0.1) 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #E0DCD5;
+            margin: 20px 0;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0;
+            color: #1A1A2E;
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        footer {
             text-align: center;
-            margin-top: 40px;
-            color: #666;
-            font-size: 14px;
+            padding: 40px 20px;
+            background: #1A1A2E;
+            color: #8E8EA0;
         }
-        .last-updated {
-            text-align: right;
-            color: #666;
-            font-size: 14px;
-            margin-top: 20px;
+        
+        footer a {
+            color: #FAFAF8;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+            opacity: 0.8;
+        }
+        
+        footer a:hover {
+            color: #C53D43;
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+                letter-spacing: 2px;
+            }
+            
+            .content {
+                padding: 30px 20px;
+                margin: -30px 10px 30px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="nav-links">
-            <a href="index.html">← 返回首页</a> |
-            <a href="support.html">技术支持</a>
+    <div class="hero-section">
+        <div class="container">
+            <a href="index.html" class="back-link">← 返回首页</a>
+            <header>
+                <h1>隐私政策</h1>
+                <p class="subtitle">您的隐私对我们至关重要</p>
+            </header>
         </div>
-        <div class="lang-toggle">
-            <button onclick="toggleLang('zh')">中文</button>
-            <button onclick="toggleLang('en')">English</button>
+    </div>
+    
+    <div class="content">
+        <div class="section">
+            <h2>1. 概述</h2>
+            <p>爱养生（iYang）非常重视您的隐私。本隐私政策说明我们如何处理您的数据。</p>
+            
+            <div class="highlight-box">
+                <p>🌿 核心原则：所有个人健康数据仅存储在您的设备上，不会上传到任何服务器</p>
+            </div>
         </div>
         
-        <div class="zh">
-            <h1>iYang 爱养生 - 隐私政策</h1>
-            
-            <p>最后更新：2026年4月9日</p>
-            
-            <h2>1. 概述</h2>
-            <p>iYang（爱养生）非常重视您的隐私保护。本隐私政策说明了我们如何处理您的数据。</p>
-            
+        <div class="section">
             <h2>2. 数据收集</h2>
             <ul>
-                <li><strong>不收集任何个人健康数据</strong>：我们不会收集、存储或上传您的任何个人健康数据到云端服务器</li>
+                <li><strong>不收集个人健康数据</strong>：我们不收集、存储或上传任何您的个人健康数据到云端服务器</li>
                 <li><strong>完全本地存储</strong>：所有照片、健康记录、语音数据、问卷回答仅存储在您的设备本地</li>
-                <li><strong>不上传云端</strong>：所有分析、处理都在您的设备本地完成，数据不离开您的手机</li>
+                <li><strong>不上传云端</strong>：所有分析和处理都在您的设备本地完成，数据不会离开您的手机</li>
             </ul>
-            
+        </div>
+        
+        <div class="section">
             <h2>3. 数据使用</h2>
             <ul>
-                <li><strong>照片仅用于本地分析</strong>：舌象、面色照片仅在您的设备上进行分析</li>
-                <li><strong>健康数据仅用于本地显示和建议</strong>：HealthKit 数据仅用于在您的设备上显示和生成养生建议</li>
-                <li><strong>不与任何第三方共享数据</strong>：我们不会与任何第三方共享您的任何数据</li>
+                <li><strong>照片仅用于本地分析</strong>：拍摄的舌象、面部照片仅在您的设备上进行分析</li>
+                <li><strong>语音数据不上传</strong>：语音数据仅在本地处理，不会上传</li>
+                <li><strong>问卷数据本地存储</strong>：所有问卷回答仅存储在您的设备上</li>
+                <li><strong>不与第三方共享</strong>：我们不会与任何第三方共享您的数据</li>
             </ul>
-            
+        </div>
+        
+        <div class="section">
             <h2>4. 数据安全</h2>
             <ul>
-                <li><strong>所有数据存储在设备本地</strong>：使用 iOS 系统的沙箱机制保护数据安全</li>
-                <li><strong>使用系统加密保护数据</strong>：利用设备的加密功能保护您的数据</li>
-                <li><strong>用户可随时删除所有数据</strong>：您可以在应用中随时查看、导出或删除所有个人数据</li>
+                <li><strong>本地存储保护</strong>：所有数据存储在应用的沙盒目录中</li>
+                <li><strong>系统加密</strong>：利用设备的加密功能保护您的数据</li>
+                <li><strong>用户可删除所有数据</strong>：您可以随时在应用中查看、导出或删除所有个人数据</li>
             </ul>
-            
+        </div>
+        
+        <div class="section">
             <h2>5. 用户权利</h2>
             <ul>
                 <li><strong>查看数据</strong>：您可以随时在应用中查看所有个人数据</li>
                 <li><strong>导出数据</strong>：您可以随时导出所有个人数据</li>
                 <li><strong>删除数据</strong>：您可以随时删除所有个人数据</li>
             </ul>
-            
+        </div>
+        
+        <div class="section">
             <h2>6. 联系我们</h2>
-            <p>如果您对本隐私政策有任何问题，请通过以下方式联系我们：</p>
+            <p>如果您对本隐私政策有任何疑问，请联系我们：</p>
             <ul>
-                <li>应用内反馈：在应用的"我的"页面中使用反馈功能</li>
+                <li>邮箱：<a href="mailto:support@iyang.app" style="color: #C53D43; text-decoration: none;">support@iyang.app</a></li>
             </ul>
-            
-            <div class="last-updated">最后更新：2026年4月9日</div>
         </div>
         
-        <div class="en">
-            <h1>iYang Wellness - Privacy Policy</h1>
-            
-            <p>Last Updated: April 9, 2026</p>
-            
-            <h2>1. Overview</h2>
-            <p>iYang Wellness takes your privacy very seriously. This privacy policy explains how we handle your data.</p>
-            
-            <h2>2. Data Collection</h2>
-            <ul>
-                <li><strong>No personal health data collected</strong>: We do not collect, store, or upload any of your personal health data to cloud servers</li>
-                <li><strong>Complete local storage</strong>: All photos, health records, voice data, and questionnaire responses are stored locally on your device only</li>
-                <li><strong>No cloud upload</strong>: All analysis and processing are done locally on your device, data never leaves your phone</li>
-            </ul>
-            
-            <h2>3. Data Usage</h2>
-            <ul>
-                <li><strong>Photos for local analysis only</strong>: Tongue and face photos are analyzed only on your device</li>
-                <li><strong>Health data for local display and suggestions only</strong>: HealthKit data is used only for display and wellness suggestions on your device</li>
-                <li><strong>No data sharing with third parties</strong>: We do not share any of your data with any third parties</li>
-            </ul>
-            
-            <h2>4. Data Security</h2>
-            <ul>
-                <li><strong>All data stored locally on device</strong>: Uses iOS sandbox mechanism to protect data security</li>
-                <li><strong>System encryption to protect data</strong>: Leverages device encryption to protect your data</li>
-                <li><strong>Users can delete all data at any time</strong>: You can view, export, or delete all personal data in the app at any time</li>
-            </ul>
-            
-            <h2>5. User Rights</h2>
-            <ul>
-                <li><strong>View data</strong>: You can view all personal data in the app at any time</li>
-                <li><strong>Export data</strong>: You can export all personal data at any time</li>
-                <li><strong>Delete data</strong>: You can delete all personal data at any time</li>
-            </ul>
-            
-            <h2>6. Contact Us</h2>
-            <p>If you have any questions about this privacy policy, please contact us through:</p>
-            <ul>
-                <li>In-app feedback: Use the feedback function in the "Me" page of the app</li>
-            </ul>
-            
-            <div class="last-updated">Last Updated: April 9, 2026</div>
-        </div>
-        
-        <div class="footer">
-            <p>© 2026 iYang 爱养生. All rights reserved.</p>
+        <div class="section">
+            <p style="text-align: right; color: #8E8EA0; font-size: 14px; margin-top: 30px;">最后更新：2026年4月9日</p>
         </div>
     </div>
     
-    <script>
-        function toggleLang(lang) {
-            const zh = document.querySelector('.zh');
-            const en = document.querySelector('.en');
-            
-            if (lang === 'zh') {
-                zh.style.display = 'block';
-                en.style.display = 'none';
-            } else {
-                zh.style.display = 'none';
-                en.style.display = 'block';
-            }
-        }
-    </script>
+    <footer>
+        <div class="container">
+            <p>
+                <a href="index.html">首页</a>
+                <a href="support.html">技术支持</a>
+            </p>
+            <p style="margin-top: 20px;">&copy; 2024 iYang Wellness. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -14,48 +14,94 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
+            color: #1A1A2E;
+            background: #FAFAF8;
+            min-height: 100vh;
+        }
+        
+        /* Hero Section - Wu Xing Gradient */
+        .hero-section {
+            background: linear-gradient(135deg, #1A1A2E 0%, #394359 50%, #2D8C5C 100%);
+            padding: 60px 20px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
         }
         
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Back Button */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #FAFAF8;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid rgba(250, 250, 248, 0.6);
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            background: rgba(26, 26, 46, 0.3);
+        }
+        
+        .back-link:hover {
+            background: #C53D43;
+            border-color: #C53D43;
+            box-shadow: 0 4px 12px rgba(197, 61, 67, 0.3);
         }
         
         header {
             text-align: center;
-            padding: 40px 0;
-        }
-        
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #667eea;
-            text-decoration: none;
+            color: white;
         }
         
         h1 {
             font-size: 2.5em;
-            color: #333;
             margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
         
         .subtitle {
-            color: #666;
             font-size: 1.1em;
+            opacity: 0.9;
+            font-weight: 300;
+            letter-spacing: 1px;
         }
         
+        /* Content Section - Rice Paper Texture */
         .content {
             background: white;
-            padding: 40px;
+            padding: 50px 40px;
+            margin: -40px 20px 40px;
             border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 
+                0 4px 20px rgba(0, 0, 0, 0.06),
+                0 0 0 1px rgba(224, 220, 213, 0.6);
+            position: relative;
+            z-index: 2;
+            border: 1px solid #E0DCD5;
         }
         
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
         
         .section:last-child {
@@ -63,59 +109,81 @@
         }
         
         h2 {
-            font-size: 1.5em;
-            color: #667eea;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f0f0f0;
+            font-size: 1.6em;
+            color: #1A1A2E;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #C53D43;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
         
         h3 {
             font-size: 1.2em;
-            color: #333;
-            margin: 25px 0 15px 0;
+            color: #1A1A2E;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
         }
         
         p {
             margin-bottom: 15px;
-            color: #555;
-            line-height: 1.8;
+            color: #5C5C6E;
+            line-height: 1.9;
+            font-size: 15px;
         }
         
+        /* FAQ Items - Card Style */
         .faq-item {
             margin-bottom: 25px;
-            padding: 20px;
-            background: #f9f9f9;
+            padding: 25px;
+            background: #FAFAF8;
             border-radius: 12px;
+            border: 1px solid #E0DCD5;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transform: translateX(4px);
         }
         
         .faq-item h4 {
-            color: #667eea;
-            margin-bottom: 10px;
+            color: #C53D43;
+            margin-bottom: 12px;
             font-size: 1.1em;
+            font-weight: 600;
         }
         
+        /* Contact Box - Cinnabar Seal Style */
         .contact-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #C53D43 0%, #B52D33 100%);
             color: white;
-            padding: 30px;
-            border-radius: 12px;
+            padding: 40px;
+            border-radius: 14px;
             text-align: center;
+            box-shadow: 0 8px 24px rgba(197, 61, 67, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.2);
         }
         
         .contact-box h3 {
             color: white;
             margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            letter-spacing: 1px;
         }
         
         .contact-box a {
             color: white;
             text-decoration: none;
             font-weight: 600;
+            font-size: 1.1em;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.3s;
         }
         
         .contact-box a:hover {
-            text-decoration: underline;
+            border-bottom-color: white;
         }
         
         ul {
@@ -124,99 +192,137 @@
         }
         
         li {
-            margin-bottom: 8px;
-            color: #555;
+            margin-bottom: 10px;
+            color: #5C5C6E;
+            line-height: 1.8;
         }
         
+        /* Footer */
         footer {
             text-align: center;
             padding: 40px 20px;
-            color: #999;
+            background: #1A1A2E;
+            color: #8E8EA0;
         }
         
         footer a {
-            color: #667eea;
+            color: #FAFAF8;
             text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+            opacity: 0.8;
+        }
+        
+        footer a:hover {
+            color: #C53D43;
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+                letter-spacing: 1px;
+            }
+            
+            .content {
+                padding: 30px 20px;
+                margin: -30px 10px 30px;
+            }
+            
+            .faq-item {
+                padding: 20px;
+            }
+            
+            .contact-box {
+                padding: 30px 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
+    <div class="hero-section">
+        <div class="container">
             <a href="index-en.html" class="back-link">← Back to Home</a>
-            <h1>Support</h1>
-            <p class="subtitle">We're here to help you</p>
-        </header>
-        
-        <div class="content">
-            <div class="section">
-                <h2>Frequently Asked Questions</h2>
-                
-                <div class="faq-item">
-                    <h4>How do I get started with iYang?</h4>
-                    <p>After downloading the app, you'll need to agree to the disclaimer on first launch. Then you can explore all features: check the current meridian hour wellness suggestions on the Home page, use the Observation page for tongue/face analysis, learn acupressure on the Meridian page, and discover solar term wellness tips on the Time page.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h4>How does health data sync work?</h4>
-                    <p>iYang integrates with Apple HealthKit to sync your steps, heart rate, sleep data, and more. Please authorize HealthKit access on first use, and data will sync automatically.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h4>How do I use the observation analysis feature?</h4>
-                    <p>Go to the "Observation" page, select tongue or face analysis, and follow the instructions to take photos. Make sure you have good lighting and clear images. Analysis results are for reference only and cannot replace professional medical diagnosis.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h4>How do I switch languages?</h4>
-                    <p>Go to the "Profile" page, tap "Language Settings," and you can switch between Chinese and English freely. The app will immediately update to display your chosen language.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h4>Is my data secure?</h4>
-                    <p>All your health data is stored locally on your device and never uploaded to any server. We value your privacy protection. For details, please see our <a href="privacy.html">Privacy Policy</a>.</p>
-                </div>
+            <header>
+                <h1>Support</h1>
+                <p class="subtitle">We're here to help you</p>
+            </header>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h4>How do I get started with iYang?</h4>
+                <p>After downloading the app, you'll need to agree to the disclaimer on first launch. Then you can explore all features: check the current meridian hour wellness suggestions on the Home page, use the Observation page for tongue/face analysis, learn acupressure on the Meridian page, and discover solar term wellness tips on the Time page.</p>
             </div>
             
-            <div class="section">
-                <h2>Feature Guides</h2>
-                
-                <h3>Meridian Hour Wellness</h3>
-                <p>Based on traditional Chinese meridian clock theory, different hours correspond to different meridian active periods. The app displays corresponding wellness suggestions based on the current time to help you align with natural rhythms.</p>
-                
-                <h3>Solar Term Wellness</h3>
-                <p>The 24 solar terms reflect natural change patterns. The app provides diet, exercise, and lifestyle wellness guidance according to the current solar term to help you harmonize with seasonal changes.</p>
-                
-                <h3>Meridian & Acupoints</h3>
-                <p>Detailed meridian pathways and acupoint information with AR technology assistance for positioning. You can learn self-massage wellness methods, but please use appropriate pressure and stop if you feel discomfort.</p>
+            <div class="faq-item">
+                <h4>How does health data sync work?</h4>
+                <p>iYang integrates with Apple HealthKit to sync your steps, heart rate, sleep data, and more. Please authorize HealthKit access on first use, and data will sync automatically.</p>
             </div>
             
-            <div class="section">
-                <h2>Feedback</h2>
-                <p>If you encounter any issues or have suggestions for improvement, please contact us:</p>
-                
-                <div class="contact-box">
-                    <h3>Contact Email</h3>
-                    <p><a href="mailto:support@iyang.app">support@iyang.app</a></p>
-                    <p style="margin-top: 15px; opacity: 0.9;">We will respond within 24 hours</p>
-                </div>
+            <div class="faq-item">
+                <h4>How do I use the observation analysis feature?</h4>
+                <p>Go to the "Observation" page, select tongue or face analysis, and follow the instructions to take photos. Make sure you have good lighting and clear images. Analysis results are for reference only and cannot replace professional medical diagnosis.</p>
             </div>
             
-            <div class="section">
-                <h2>Important Notes</h2>
-                <ul>
-                    <li>The wellness suggestions provided by this app are for reference only and cannot replace professional medical diagnosis and treatment</li>
-                    <li>If you have health concerns, please seek medical attention promptly</li>
-                    <li>Special populations such as pregnant women, children, and elderly should consult doctors before use</li>
-                    <li>Please use appropriate pressure for acupressure massage and stop immediately if you feel discomfort</li>
-                </ul>
+            <div class="faq-item">
+                <h4>How do I switch languages?</h4>
+                <p>Go to the "Profile" page, tap "Language Settings," and you can switch between Chinese and English freely. The app will immediately update to display your chosen language.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Is my data secure?</h4>
+                <p>All your health data is stored locally on your device and never uploaded to any server. We value your privacy protection. For details, please see our <a href="privacy-en.html" style="color: #C53D43; text-decoration: none;">Privacy Policy</a>.</p>
             </div>
         </div>
         
-        <footer>
-            <p><a href="index-en.html">Home</a> | <a href="privacy-en.html">Privacy Policy</a></p>
-            <p style="margin-top: 20px;">&copy; 2024 iYang Wellness. All rights reserved.</p>
-        </footer>
+        <div class="section">
+            <h2>Feature Guides</h2>
+            
+            <h3>Meridian Hour Wellness</h3>
+            <p>Based on traditional Chinese meridian clock theory, different hours correspond to different meridian active periods. The app displays corresponding wellness suggestions based on the current time to help you align with natural rhythms.</p>
+            
+            <h3>Solar Term Wellness</h3>
+            <p>The 24 solar terms reflect natural change patterns. The app provides diet, exercise, and lifestyle wellness guidance according to the current solar term to help you harmonize with seasonal changes.</p>
+            
+            <h3>Meridian & Acupoints</h3>
+            <p>Detailed meridian pathways and acupoint information with AR technology assistance for positioning. You can learn self-massage wellness methods, but please use appropriate pressure and stop if you feel discomfort.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Feedback</h2>
+            <p>If you encounter any issues or have suggestions for improvement, please contact us:</p>
+            
+            <div class="contact-box">
+                <h3>Contact Email</h3>
+                <p><a href="mailto:support@iyang.app">support@iyang.app</a></p>
+                <p style="margin-top: 15px; opacity: 0.9;">We will respond within 24 hours</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Important Notes</h2>
+            <ul>
+                <li>The wellness suggestions provided by this app are for reference only and cannot replace professional medical diagnosis and treatment</li>
+                <li>If you have health concerns, please seek medical attention promptly</li>
+                <li>Special populations such as pregnant women, children, and elderly should consult doctors before use</li>
+                <li>Please use appropriate pressure for acupressure massage and stop immediately if you feel discomfort</li>
+            </ul>
+        </div>
     </div>
+    
+    <footer>
+        <div class="container">
+            <p>
+                <a href="index-en.html">Home</a>
+                <a href="privacy-en.html">Privacy Policy</a>
+            </p>
+            <p style="margin-top: 20px;">&copy; 2024 iYang Wellness. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
